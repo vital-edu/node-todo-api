@@ -10,6 +10,7 @@
   "author": "Eduardo Vital Alencar Cunha",
   "license": "AGPL-3.0",
   "dependencies": {
-    "mongodb": "^2.2.12"
+    "mongodb": "^2.2.12",
+    "mongoose": "^4.7.0"
   }
 }
