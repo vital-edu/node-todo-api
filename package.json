@@ -5,6 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "start": "node server/server.js",
+    "autostart": "nodemon server/server.js",
     "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon -x 'npm test'"
   },
