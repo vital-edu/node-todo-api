@@ -10,6 +10,9 @@
     "test": "mocha server/**/*.test.js",
     "test-watch": "nodemon -x 'npm test'"
   },
+  "engines": {
+    "node": "6.9.1"
+  },
   "author": "Eduardo Vital Alencar Cunha",
   "license": "AGPL-3.0",
   "dependencies": {
