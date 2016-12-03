@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node server/server.js",
     "autostart": "nodemon server/server.js",
-    "test": "mocha server/**/*.test.js",
+    "test": "NODE_ENV=test mocha server/**/*.test.js",
     "test-watch": "nodemon -x 'npm test'"
   },
   "engines": {
