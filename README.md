@@ -39,6 +39,16 @@ $ npm run autostart
 
 After the server start, access the site at http://localhost:3000/
 
+The APP has the following routes:
+
+| Method | Route      | Description                                                    |
+|--------|------------|----------------------------------------------------------------|
+| GET    | /todos     | Return all the tasks                                           |
+| GET    | /todos/:id | Return the task that matches the id provided                   |
+| POST   | /todos     | Create a task with the specified data provided in the body     |
+| PATCH  | /todos/:id | Update the attributes of the task that matches the provided id |
+
+
 ##  4. <a name='Testing'></a>Testing
 
 To run the tests just once, execute the command:
