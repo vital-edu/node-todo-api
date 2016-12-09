@@ -1,8 +1,10 @@
 <!-- vscode-markdown-toc -->
-1. [Dependencies](#Dependencies)
-2. [Install](#Install)
-3. [Running Application](#RunningApplication)
-4. [Testing](#Testing)
+* 1. [Dependencies](#Dependencies)
+* 2. [Managing Dependencies](#ManagingDependencies)
+* 3. [Environment Configurations](#EnvironmentConfigurations)
+* 4. [Running Application](#RunningApplication)
+* 5. [Running Tests](#RunningTests)
+
 <!-- /vscode-markdown-toc -->
 
 # Node Todo Api
@@ -13,7 +15,7 @@ Simple API made with [Node.js](http://nodejs.org) and [Express.js](http://expres
 
 - Node v6.9.1 (recommend use [nvm](https://github.com/creationix/nvm#install-script))
 
-##  2. <a name='Install'></a>Install
+##  2. <a name='ManagingDependencies'></a>Managing Dependencies
 
 To install all node dependencies, execute the command:
 
@@ -21,7 +23,20 @@ To install all node dependencies, execute the command:
 $ npm install
 ```
 
-##  3. <a name='RunningApplication'></a>Running Application
+
+##  3. <a name='EnvironmentConfigurations'></a>Environment Configurations
+
+The environment configurations are managed by the file server/config.json.
+
+The file is not tracked by the git because contains sensitive informations. There is a template named server/config.json.template that can be used. Remember that it is highly recommend that the JWT_SECRET is randomly used and diferent in each environment.
+
+You can generate the secret the way you want or simple execute the script that uses the package crypto-extra to generate a random string of length 64:
+
+```
+$ npm run generate:secret
+```
+
+##  4. <a name='RunningApplication'></a>Running Application
 
 The application provides a simple API that manages a TODO list.
 
@@ -49,7 +64,7 @@ The APP has the following routes:
 | PATCH  | /todos/:id | Update the attributes of the task that matches the provided id |
 
 
-##  4. <a name='Testing'></a>Testing
+##  5. <a name='RunningTests'></a>Running Tests
 
 To run the tests just once, execute the command:
 
