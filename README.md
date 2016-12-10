@@ -56,13 +56,16 @@ After the server start, access the site at http://localhost:3000/
 
 The APP has the following routes:
 
-| Method | Route      | Description                                                    |
-|--------|------------|----------------------------------------------------------------|
-| GET    | /todos     | Return all the tasks                                           |
-| GET    | /todos/:id | Return the task that matches the id provided                   |
-| POST   | /todos     | Create a task with the specified data provided in the body     |
-| PATCH  | /todos/:id | Update the attributes of the task that matches the provided id |
-
+| Method | Route           | Description                            |
+|--------|-----------------|----------------------------------------|
+| POST   | /users          | Register an user and return auth token |
+| POST   | /users/login    | Login                                  |
+| GET    | /users/me       | Get information about logged user      |
+| DELETE | /users/me/token | Logout                                 |
+| GET    | /todos          | Get all the tasks of the logged user   |
+| GET    | /todos/:id      | Get a specific task of the logged user |
+| POST   | /todos          | Create a task by logged user           |
+| PATCH  | /todos/:id      | Update task of logged user             |
 
 ##  5. <a name='RunningTests'></a>Running Tests
 
